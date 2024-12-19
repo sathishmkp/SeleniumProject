@@ -21,13 +21,13 @@ public class DragandDropExamples {
 		WebElement To = driver.findElement(By.id("form:drop_content"));
 		Actions action = new Actions(driver);
 		
-		action.dragAndDrop(From, To).build().perform();
+		action.dragAndDrop(From, To).perform();
 		
 		WebElement From1 = driver.findElement(By.id("form:conpnl_header"));
 		WebElement To1 = driver.findElement(By.id("form:restrictPanel"));
 		Actions action1 = new Actions(driver);
 		
-		action1.dragAndDrop(From1, To1).build().perform();
+		action1.dragAndDrop(From1, To1).perform();
 		
 
 }

@@ -19,11 +19,11 @@ public class Dbcompnydetails {
 		
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		
-		Connection connection = DriverManager.getConnection("jdbc:mysql://root@127.0.0.1/satz_2202");
+		Connection connection = DriverManager.getConnection("jdbc:mysql://root@127.0.0.1/world");
 		
 	    Statement statement =	connection.createStatement();
 	    
-	    ResultSet resultSet=   statement.executeQuery("SELECT * FROM `cmpny_detls`");
+	    ResultSet resultSet=   statement.executeQuery("SELECT * FROM `country`");
 	    
 	    Workbook workbook = new XSSFWorkbook();
 	    Sheet sheet = workbook.createSheet();

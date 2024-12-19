@@ -1,5 +1,7 @@
 package seleniumProject;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,16 +18,16 @@ public class DropdownExamples {
 		driver.get("https://www.leafground.com/select.xhtml");
 		
 		//Select your favorite language 
-		WebElement language = driver.findElement(By.xpath("//*[@id=\'j_idt87\']/div/div[1]/div[1]/div/div/select"));
+		WebElement language = driver.findElement(By.xpath("//select[@class='ui-selectonemenu']"));
 		Select select = new Select(language);
 		Thread.sleep(3000);
 		select.selectByIndex(2);
 		Thread.sleep(3000);
 		select.selectByVisibleText("Selenium");
-		System.out.println(select.getOptions());
+		List<WebElement> list  = select.getOptions();
 		
-		WebElement country = driver.findElement(By.id("j_idt87:country_label"));
-		country.sendKeys("India");
+	/*	WebElement country = driver.findElement(By.id("j_idt87:country_label"));
+		country.sendKeys("India"); */
 		
 	}
 	

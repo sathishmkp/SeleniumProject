@@ -27,12 +27,13 @@ public class AlertExamples {
         driver.manage().window().maximize();
         
 		driver.get("https://www.leafground.com/alert.xhtml");
-		TakesScreenshot screenshot = (TakesScreenshot) driver;
-		File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
-		File file = new File("C:\\ADM Videos");
+		TakesScreenshot scrnShot= (TakesScreenshot) driver;
+		
+	    File srcFile=scrnShot.getScreenshotAs(OutputType.FILE);
+	    
+	    File file = new File("C:\\Users\\sathi\\OneDrive\\Desktop\\My Files\\ADM Study Materials");
+		
 		FileUtils.copyFile(srcFile, file);
-		
-		
 		
 		//Conform Alert
 		WebElement ConformAlert=driver.findElement(By.id("j_idt88:j_idt91"));
